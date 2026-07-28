@@ -1,6 +1,0 @@
-{
-  "name": "LeetCode Practice Env",
-  "extensions": [
-    "leetcode.vscode-leetcode"
-  ]
-}
