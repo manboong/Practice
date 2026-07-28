@@ -1,0 +1,26 @@
+{
+  "name": "LeetCode Python Setup",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "leetcode.vscode-leetcode",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ],
+      "settings": {
+        "leetcode.defaultLanguage": "python3",
+        "leetcode.workspaceFolder": "${workspaceFolder}/solutions",
+        "python.languageServer": "Pylance",
+        "python.analysis.typeCheckingMode": "basic",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}
