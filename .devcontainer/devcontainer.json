@@ -19,7 +19,8 @@
         "leetcode.workspaceFolder": "${workspaceFolder}/solutions",
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "workbench.colorTheme": "Dark Modern"
       }
     }
   },
