@@ -47,7 +47,7 @@ class Solution:
                 left += 1
 
         l, r = res_bounds
-        return s[l : r + 1] if res_len != float("inf") else ""
+        return s[l: r + 1] if res_len != float("inf") else ""
 
 
 # @lc code=end
