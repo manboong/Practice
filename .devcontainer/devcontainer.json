@@ -39,5 +39,5 @@
 
   "postCreateCommand": "R -q -e \"install.packages(c('languageserver', 'Rlab', 'tidyverse', 'igraph'), repos='https://cloud.r-project.org')\"",
 
-  "remoteUser": "vscode"
+  "remoteUser": "rstudio"
 }
