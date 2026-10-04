@@ -1,13 +1,18 @@
 {
   "name": "Programming Practice (Python + R)",
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+
+  "image": "ghcr.io/rocker-org/devcontainer/r-ver:4.6",
+
   "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
     },
-    "ghcr.io/devcontainers/features/git-lfs:1": {},
-    "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {}
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
   },
+
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,16 +21,23 @@
         "ms-python.vscode-pylance",
         "REditorSupport.r"
       ],
+
       "settings": {
         "leetcode.defaultLanguage": "python3",
         "leetcode.workspaceFolder": "${workspaceFolder}/python/solutions",
+
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
+
+        "r.rpath.linux": "/usr/local/bin/R",
+
         "editor.formatOnSave": true,
         "workbench.colorTheme": "Dark Modern"
       }
     }
   },
-  "postCreateCommand": "R -q -e \"install.packages(c('languageserver', 'tidyverse', 'igraph'), repos='https://cloud.r-project.org')\"",
+
+  "postCreateCommand": "R -q -e \"install.packages(c('languageserver', 'Rlab', 'tidyverse', 'igraph'), repos='https://cloud.r-project.org')\"",
+
   "remoteUser": "vscode"
 }
