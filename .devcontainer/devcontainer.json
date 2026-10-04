@@ -1,22 +1,24 @@
 {
-  "name": "LeetCode Python Setup",
+  "name": "Programming Practice (Python + R)",
   "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
     },
-    "ghcr.io/devcontainers/features/git-lfs:1": {}
+    "ghcr.io/devcontainers/features/git-lfs:1": {},
+    "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {}
   },
   "customizations": {
     "vscode": {
       "extensions": [
         "leetcode.vscode-leetcode",
         "ms-python.python",
-        "ms-python.vscode-pylance"
+        "ms-python.vscode-pylance",
+        "REditorSupport.r"
       ],
       "settings": {
         "leetcode.defaultLanguage": "python3",
-        "leetcode.workspaceFolder": "${workspaceFolder}/solutions",
+        "leetcode.workspaceFolder": "${workspaceFolder}/python/solutions",
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
         "editor.formatOnSave": true,
@@ -24,5 +26,6 @@
       }
     }
   },
+  "postCreateCommand": "R -q -e \"install.packages(c('languageserver', 'tidyverse', 'igraph'), repos='https://cloud.r-project.org')\"",
   "remoteUser": "vscode"
 }
