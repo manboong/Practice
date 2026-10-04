@@ -30,6 +30,12 @@
         "python.analysis.typeCheckingMode": "basic",
 
         "r.rpath.linux": "/usr/local/bin/R",
+        "r.plot.backend": "httpgd",
+
+        "[r]": {
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "REditorSupport.r"
+        },
 
         "editor.formatOnSave": true,
         "workbench.colorTheme": "Dark Modern"
@@ -37,7 +43,7 @@
     }
   },
 
-  "postCreateCommand": "R -q -e \"install.packages(c('languageserver', 'Rlab', 'tidyverse', 'igraph'), repos='https://cloud.r-project.org')\"",
+  "postCreateCommand": "R -q -e \"install.packages(c('languageserver', 'lintr', 'styler', 'httpgd', 'Rlab', 'tidyverse', 'igraph'), repos='https://cloud.r-project.org')\"",
 
   "remoteUser": "rstudio"
 }
